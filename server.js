@@ -11,6 +11,7 @@ io.on('connection', function(socket) {
 
 	socket.on('message', function(message) {
 		console.log('Message received: ' + message.text);
+		//io.emit
 		socket.broadcast.emit('message', message);
 	});
 
